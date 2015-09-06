@@ -1,0 +1,27 @@
+package salarycalc;
+
+public class Example {
+	
+	public static void main(String arg[]){
+		
+		
+		SalaryCal salarycal = new SalaryCal(25);
+		
+		double yearlySalary = salarycal.CalculateYearly(salarycal.getRate());
+		System.out.println(" Your Anual Salary is :$" + yearlySalary);
+		
+		
+		double totalRate = salarycal.CalculateRately(yearlySalary);
+		System.out.println(" Your Rate is :$"+ totalRate);
+		
+		double monthlySalary = salarycal.CalculateMonthly(totalRate);
+		System.out.println(" Your Monthly Rate is:$" + monthlySalary);
+		
+		double weeklySalary = salarycal.CalculateWeekly(totalRate);
+		System.out.println(" You Weekly Salary is :$" + weeklySalary);
+		
+		double daylySalary = salarycal.CalculatDayly(totalRate);
+		System.out.println(" Your Dayly Salary is :$"+ daylySalary);
+	}
+
+}
